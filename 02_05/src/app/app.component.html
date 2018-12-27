@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="topbar">{{title}}</div>
+  <div class="chatarea">
+    <div style="min-height: 0; overflow: scroll" id="scrolldiv">
+    <div *ngFor="let chat of chats; let i = index" class="chat" [class.me]="i % 3"><p>{{chat}}</p></div>
+    </div>
+  </div>
+  <div class="inputarea">
+    <form (submit)="addChat()">
+        <input class="textbox" name="message" [(ngModel)]="message" type="text">
+        <button type="submit" class="sendbutton">Send</button>
+    </form>
+  </div>
+</div> 
