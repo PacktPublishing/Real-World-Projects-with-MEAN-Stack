@@ -1,0 +1,59 @@
+<app-appnav></app-appnav>
+<div class="container">
+  <br><br>
+  <div class="row">
+    <div class="col">
+        <div class="card text-white bg-secondary mb-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                  <i class="fas fa-5x fa-box"></i> <span class="statsNum">{{orders.length}}</span>
+              </p>
+            </div>
+          </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                  <i class="fas fa-5x fa-money-bill-alt"></i> <span class="statsNum">{{totalEarnings(orders) | currency}}</span>
+              </p>
+            </div>
+          </div>
+    </div>
+    <div class="col">
+
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+              <p class="card-text d-flex justify-content-around">
+                  <i class="fas fa-5x fa-sticky-note"></i> <span class="statsNum">{{totalItems(orders)}}</span>
+              </p>
+            </div>
+          </div>
+    </div>
+  </div>
+  <div class="card mt-2" *ngFor="let order of orders">
+    <div class="card-body p-0 pl-3">
+      <div class="row">
+        <div class="col d-flex flex-column justify-content-center">
+          <h5 class="card-title">Address</h5>
+          <p class="card-text">
+            Name: {{order.firstName}} {{order.lastName}}<br />
+            Address: {{order.addressOne}}<br />
+            Address: {{order.addressTwo}} <br />
+            {{order.country}}, {{order.state}}, {{order.zip}}<br />
+          </p>
+        </div>
+        <div class="col">
+            <h5 class="card-title">Order Items</h5>
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let item of order.items">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-muted text-right"><b>
+        Order Id: {{order._id}} <br>
+        Total: {{orderTotal(order.items) | currency}}
+    </b></div>
+  </div>
+</div>
