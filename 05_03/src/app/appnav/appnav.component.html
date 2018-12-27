@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Learn It </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/products">Products <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      </li>
+    </ul>
+    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    
+        <li class="nav-item" style="padding: 0 20px; font-size: 1.4em">
+          <a class="nav-link p-2"  routerLink="/cart" style="color:#fff">
+            <i class="fas fa-shopping-cart"></i> <span class="badge badge-light" style="margin-left: 8px" *ngIf="cart.length">{{cart.length}}</span>
+          </a>
+        </li>
+      </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="button"></button>
+    </form>
+  </div>
+</nav>
