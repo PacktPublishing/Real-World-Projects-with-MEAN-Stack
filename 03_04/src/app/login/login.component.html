@@ -1,0 +1,31 @@
+<div class="fullpage">
+  <div class="text-center login-container">
+    <form class="form-signin" (ngSubmit)="login(user)" #loginFForm="ngForm">
+      <h1 class="h3 mb-3 font-weight-normal">Login In</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Email address"
+        required=""
+        autofocus=""
+        name="email"
+        email
+        [(ngModel)]="user.email"
+      />
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        required=""
+        name="password"
+        [(ngModel)]="user.password"
+      />
+      <button class="mt-3 btn btn-lg btn-primary btn-block" type="submit">Login in</button>
+      <p>
+        <a class="mt-3 btn btn-block btn-outline-success" routerLink="/register">Register</a>
+      </p>
+    </form>
+  </div>
+</div>
