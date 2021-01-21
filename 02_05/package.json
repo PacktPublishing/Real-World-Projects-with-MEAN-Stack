@@ -26,7 +26,7 @@
     "express": "^4.16.3",
     "mongoose": "^5.3.13",
     "rxjs": "~6.2.0",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "socket.io-client": "^2.2.0",
     "zone.js": "~0.8.26"
   },
