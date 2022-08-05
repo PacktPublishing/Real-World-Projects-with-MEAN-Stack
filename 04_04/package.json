@@ -27,7 +27,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.4",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.3.14",
+    "mongoose": "^5.7.5",
     "mongoose-unique-validator": "^2.0.2",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
